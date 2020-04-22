@@ -3,7 +3,12 @@
                 <br>
                     <div class="col-sm-12 text-center"><h2 class="text-white">Listado de <b>Personas</b></h2></div>
                 <br>
-                <div class="col-sm-12 text-center"><a href='?c=person&a=insert' class='btn btn-success btn-lg btn-block'>Crear Persona</a></div>
+                <div class="row">
+                <div class="col-sm-6 text-center"><a href='?c=person&a=insert' class='btn btn-success btn-lg btn-block'>Crear Persona</a></div>
+                <br>
+                <div class="col-sm-6 text-center"><a href='?c=home' class='btn btn-outline-danger btn-lg btn-block'>Regresar</a></div>
+                </div>
+                
                 <br>
                 <div class="row" id="divTareas">
                 <?php foreach ($people as $person) : ?>

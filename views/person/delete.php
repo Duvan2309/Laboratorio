@@ -19,6 +19,7 @@
                     </div>
                     <br>
                     <button type="submit" class="btn btn-lg btn-block btn-danger">Confirmar eliminación</button>
+                    <a href='?c=person' class='btn btn-outline-danger btn-lg btn-block'>Regresar</a>
 				</form>
             </div>
         </div>
