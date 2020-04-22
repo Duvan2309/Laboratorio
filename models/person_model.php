@@ -8,7 +8,7 @@ class person_model
     private $email;
     private $phone;
 
-    private $db;
+    public $db;
 
     function __construct()
     {
@@ -17,14 +17,14 @@ class person_model
 
     public function get()
     {
-        $sql = "SELECT * FROM person WHERE id = $this->id";
+        $sql = "SELECT p.id, p.name, p.identification, p.email, p.phone, u.username FROM person p LEFT JOIN user u ON u.person_id = p.id WHERE p.id = $this->id";
 
         return $this->db->ExecSelect($sql);
     }
 
     public function list()
     {
-        $sql = "SELECT * FROM person";
+        $sql = "SELECT p.id, p.name, p.identification, p.email, p.phone, u.username FROM person p LEFT JOIN user u ON u.person_id = p.id";
 
         return $this->db->ExecSelect($sql);
     }
@@ -44,9 +44,13 @@ class person_model
 
     public function delete()
     {
-        $sql = "DELETE FROM person WHERE id = $this->id";
+        $sql1 = "DELETE FROM user WHERE person_id = $this->id";
 
-        return $this->db->ExecQuery($sql);
+        $this->db->ExecQuery($sql1);
+
+        $sql2 = "DELETE FROM person WHERE id = $this->id";
+
+        return $this->db->ExecQuery($sql2);
     }
 
     public function get_id()

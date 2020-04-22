@@ -3,7 +3,7 @@
                 <br>
                 <div class="col-sm-12 text-center"><h2 class="text-white">Eliminar <b>Persona</b></h2></div>
                 <br>
-                <form id="crearTarea" action="?c=person&a=confirm_delete" method="POST">
+                <form action="?c=person&a=confirm_delete" method="POST">
                     <input type="hidden" id="id" name="id" value="<?=  $person[0] ?>">
                     <div class="form-group">
                         <input type="text" class='form-control border border-success bg-dark text-white' disabled="disabled" value="<?=  $person[1] ?>">

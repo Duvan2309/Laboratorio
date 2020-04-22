@@ -3,7 +3,7 @@
                 <br>
                 <div class="col-sm-12 text-center"><h2 class="text-white">Nueva <b>Persona</b></h2></div>
                 <br>
-                <form id="crearTarea" action="?c=person&a=create" method="POST">
+                <form action="?c=person&a=create" method="POST">
                     <div class="form-group">
                         <input type="text" name="name" id="name" class='form-control border border-success bg-dark text-white' maxlength="200" required placeholder="Nombre">
                     </div>
